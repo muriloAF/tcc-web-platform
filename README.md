@@ -39,9 +39,9 @@ The objective of this project is to provide a digital solution that helps women 
 ### Website
   -https://avenasing.rf.gd/html/Pagina_Inicial.html
 ### At your local storage
-  -1. Clone this repository
-  -2. Configure the database
-  -3. Run the application using a local server
+  1. Clone this repository
+  2. Configure the database
+  3. Run the application using a local server
   
 ## Team
 - Murilo Alves da Fonseca
