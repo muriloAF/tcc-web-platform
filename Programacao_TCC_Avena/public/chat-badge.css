@@ -1,0 +1,26 @@
+.badge-dot, .chat-dot {
+  display:inline-block;
+  width:12px;
+  height:12px;
+  background:#6b21a8;
+  border-radius:50%;
+  vertical-align:middle;
+  position:relative;
+  animation:pulseBadge 1.3s ease-in-out infinite;
+  /* removido qualquer contorno branco padrão */
+}
+.chat-dot { margin-left:4px; }
+/* Purple variant for brand-new chat (no messages yet) */
+.chat-dot.new-chat { background:#6b21a8; animation:pulseNewChat 1.4s ease-in-out infinite; }
+/* Allow badge-dot to show purple for new chat as usado em páginas Bem Vindo */
+.badge-dot.new-chat { background:#6b21a8; animation:pulseNewChat 1.4s ease-in-out infinite; }
+@keyframes pulseNewChat {
+  0% { transform:scale(1); opacity:1; }
+  55% { transform:scale(1.3); opacity:0.65; }
+  100% { transform:scale(1); opacity:1; }
+}
+@keyframes pulseBadge {
+  0% { transform:scale(1); opacity:1; }
+  60% { transform:scale(1.25); opacity:0.55; }
+  100% { transform:scale(1); opacity:1; }
+}

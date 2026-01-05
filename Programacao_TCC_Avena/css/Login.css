@@ -1,0 +1,358 @@
+@font-face {
+  font-family: "Birthstone";
+  src: url("/fonts/paginaInicial/Birthstone/Birthstone-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mulish";
+  src: url("/fonts/paginaInicial/Mulish/Mulish-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/edicaoPerfil/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("/fonts/edicaoPerfil/Open_Sans/static/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/edicaoPerfil/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+  * {
+      z-index: 0;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Mulish", sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+      color: #545454;
+      padding-top: 70px;
+    }
+
+   
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #917ba4;
+      padding: 10px 40px;
+      z-index: 1;
+      height: 65px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 35px;
+    }
+
+    .logo img {
+      cursor: pointer;
+      height: 35px;
+      margin-top: 10px;
+    }
+    .menulogin{
+      display: flex;
+      align-items: center;
+      gap: 15px;
+  }
+    .menu-icon {
+      background: #ffffff00;
+      border: none;
+      font-size: 1.5em;
+      color: rgb(227, 222, 222);
+      cursor: pointer;
+      height: 25px;
+      margin-top: 8px;
+    }
+
+    /* LOGIN */
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: calc(100vh - 90px);
+    }
+
+    .login-card {
+      z-index: 0;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(81, 40, 40, 0.1);
+      display: flex;
+      overflow: hidden;
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .login-form {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .login-form label {
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .login-form .form-control {
+      margin-bottom: 15px;
+    }
+
+    .forgot {
+      font-size: 0.9em;
+      color: #5a78d0;
+      text-decoration: none;
+    }
+
+    .btn-login {
+      background: #cecccc;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+
+    .btn-login:hover {
+      background: #e45c5c;
+      transform: scale(1.05); 
+    }
+
+    .btn-login:active {
+      transform: scale(0.95); 
+    }
+
+    .signup {
+      margin-top: 15px;
+      font-size: 0.9em;
+      text-align: center;
+    }
+
+    .signup a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .login-image {
+      flex: 1;
+      background: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+
+    .login-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .hidden {
+  display: none;
+}
+
+/* Quando ativo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+.show {
+  margin-top:1%;
+  z-index: 1;
+  animation: fadeInUp 1s ease forwards;
+  margin-left: 84%;
+  height:auto;
+  border-radius: 10%;
+  padding:2%;
+  position: absolute;
+  opacity: 70%;
+  background-color: #f5f5f5;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+}
+.show a{
+  color: #4a4a4a;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.show ul{
+  padding:1% 1%;
+  text-align:center;
+}
+.show li{
+  padding: 12px 15px;
+  list-style: none;
+}
+
+
+
+/* Fundo escuro transparente */
+.modal {
+  display: none; /* começa escondido */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa do modal */
+.modal-content {
+  background: #f9f8f2;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Mensagem */
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-content p b {
+  font-weight: bold;
+}
+
+/* Botão */
+.modal-content button {
+  display: inline-block; /* deixa o botão só no tamanho do conteúdo */
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+  width: auto; /* garante que não estique */
+  min-width: 100px; /* opcional: largura mínima pra não ficar pequeno demais */
+}
+
+.modal-content button:hover {
+  background: #e05555;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8dc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-radius: 16px;
+  padding: 20px;
+  z-index: 9999;
+  max-width: 480px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.cookie-content h4 {
+  color: #004aad;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.cookie-content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cookie-content a {
+  color: #004aad;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cookie-btn.accept {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.cookie-btn.accept:hover {
+  background-color: #003b88;
+}
+
+.cookie-btn.decline {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.cookie-btn.decline:hover {
+  background-color: #cfd8dc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

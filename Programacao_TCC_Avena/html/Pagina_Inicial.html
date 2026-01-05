@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avena</title>
+  <link rel="stylesheet" href="..\css\Pagina_Inicial.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <img src="..\img\logoAvena.png" alt="Logo Avena" href="Pagina_Inicial.html">
+      </div>
+      <div class="menu">
+        <a class="btnEntrar" href="..\html\login.php" >Entrar</a>
+        <button class="menu-icon" id="menu-btn">&#9776;</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===============================
+     Banner de Consentimento de Cookies - Singularity Solutions
+     =============================== -->
+<div id="cookie-banner" class="cookie-banner">
+  <div class="cookie-content">
+  <h4>Privacidade e Cookies</h4>
+  <p>
+        A Singularity Solutions utiliza cookies para oferecer uma experiência mais personalizada,
+        melhorar o desempenho da plataforma e garantir o funcionamento seguro dos serviços.
+        Ao aceitar, você concorda com o uso de cookies conforme nossa
+  <a href="..\img\AVENA - Termos de Uso e Política de Privacidade.pdf" target="_blank">Política de Privacidade</a>.
+  </p>
+  <div class="cookie-buttons">
+  <button id="accept-cookies" class="cookie-btn accept">Aceitar</button>
+  <button id="decline-cookies" class="cookie-btn decline">Recusar</button>
+  </div>
+  </div>
+  </div>
+
+
+  <!-- Menu -->
+  <nav id="menu" class="hidden">
+    <ul>
+      <li><a href=".\quemSomos.php">Quem somos</a></li>
+      <li><a href=".\cadastro.php">Cadastrar-se</a></li>
+      <hr>
+      <li><a href=".\sejaParceiro.php">Seja um Parceiro</a></li>
+      <li><a href=".\Pagina_Inicial.html"><span class="Home">Home</span></a></li>
+    </ul>
+  </nav>
+
+
+
+
+
+  <section class="hero">
+    <div class="texto">
+      <h2>Encontre aqui as melhores</h2>
+      <h1>Profissionais!</h1>
+
+      <a href="..\html\busca.php" style="text-decoration:none;">
+      <div class="busca" >
+        <div class="campo">
+          <p>O que você está procurando?</p>
+          <input type="text" name="servico" placeholder="Unhas, Cabelo, Faxina...">
+        </div>
+        <div class="campo">
+          <p>Onde você está?</p>
+          <input type="text" name="local" placeholder="Cidade">
+        </div>
+      </div>
+      </a>
+    </div>
+
+    <div class="imagem">
+      <img src="..\img\indeximg.png" alt="Profissional sorrindo" class="principal">
+    </div>
+  </section>
+
+  <script src="..\js\Pagina_Inicial.js"></script>
+  <script src="..\js\cookies.js"></script>
+</body>
+
+</html>
+

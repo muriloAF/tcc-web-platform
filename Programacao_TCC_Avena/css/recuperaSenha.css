@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #555;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+input:focus, select:focus {
+  border-color: #7a57d1; 
+}
+
+.btn-login {
+  width: 100%;
+  padding: 12px;
+  background: #917ba4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: #5a3fa6;
+}
+
+.signup {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.signup a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #7a57d1;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+/* Fundo escuro transparente */
+.modal {
+  display: none; /* começa escondido */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Caixa do modal */
+.modal-content {
+  background: #f9f8f2;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+/* Mensagem */
+.modal-content p {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-content p b {
+  font-weight: bold;
+}
+
+/* Botão */
+.modal-content button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #ff6b6b;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.3s;
+}
+
+.modal-content button:hover {
+  background: #e05555;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8dc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-radius: 16px;
+  padding: 20px;
+  z-index: 9999;
+  max-width: 480px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.cookie-content h4 {
+  color: #004aad;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.cookie-content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cookie-content a {
+  color: #004aad;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cookie-btn.accept {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.cookie-btn.accept:hover {
+  background-color: #003b88;
+}
+
+.cookie-btn.decline {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.cookie-btn.decline:hover {
+  background-color: #cfd8dc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

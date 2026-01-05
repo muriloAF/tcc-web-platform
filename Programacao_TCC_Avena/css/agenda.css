@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/paginaInicial/Mulish/Mulish-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  margin: 0;
+  background: #fafafa;
+}
+
+/* HEADER */
+.header {
+  background: #917ba4;
+  padding: 12px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img { height: 45px; }
+.perfil-area { display: flex; align-items: center; gap: 12px; }
+.nome { color: #fff; font-weight: 600; }
+.perfil-foto {
+  width: 40px; height: 40px; border-radius: 50%;
+  object-fit: cover; border: 2px solid #fff;
+}
+
+/* TABS */
+
+/* GARANTE que nada ultrapasse a largura e cause tela branca */
+.tab-page * {
+    max-width: 100%;
+}
+/* cada página ocupa exatamente a largura inteira da tela */
+.tab-page {
+    width: 100%;
+    min-width: 100%;   /* ESSENCIAL */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.tabs-container {
+  max-width: 1100px;
+  margin: 28px auto;
+  padding: 0 16px;
+}
+
+.tabs-header {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg,#ddd,#eee);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.06);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+  font-weight: 700;
+}
+
+.tab-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+}
+
+/* botões das abas */
+.tab-btn.active {
+    background: linear-gradient(135deg,#8272bb,#8360ff);
+    color:#fff;
+}
+
+/* container que esconde overflow */
+.tabs-wrapper {
+    overflow: hidden;
+    width: 100%;
+}
+
+/* área interna com os 2 slides */
+.tabs-content {
+    display: flex;
+    width: 100%; /* 2 abas = 200% */
+    transition: transform .35s ease;
+}
+
+
+
+/* FORM ANOTAÇÕES */
+.form-anotacao {
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.form-group { display:flex; flex-direction:column; gap:8px; }
+input[type="date"], textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.2px solid #d0cfe6;
+  font-size: 1rem;
+}
+textarea { min-height: 80px; resize: vertical; }
+
+.btn-salvar {
+  width: 165px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background:  #917ba4;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(133,96,255,0.12);
+  transition: transform .12s ease;
+}
+.btn-salvar:hover { transform: translateY(-4px); }
+
+/* CALENDÁRIO */
+.calendario-container {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 18px;
+}
+
+.calendario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.cal-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  background: #917ba4;
+}
+
+.calendario {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.calendario th {
+  background: #917ba4;
+  color: #fff;
+  padding: 8px 6px;
+}
+
+.calendario td {
+  width: 14.28%;
+  height: 90px;
+  border: 1px solid #eee;
+  vertical-align: top;
+  padding: 8px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.dia-numero { font-weight: 700; color: #917ba4; margin-bottom: 6px; }
+.dia-evento { background: #f7f0ff; }
+
+.evento-mini {
+  background: #917ba4;
+  color: #fff;
+  padding: 4px 6px;
+  font-size: 0.70rem;
+  border-radius: 6px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+}
+.evento-mini:hover { background: #917ba4; }
+
+/* SOLICITAÇÕES */
+.lista-solicitacoes { display:flex; flex-direction:column; gap:14px; }
+
+.sol-card {
+  background:#fff;
+  padding:14px;
+  border-radius:12px;
+  display:flex;
+  justify-content:flex-start;   /* <-- CORREÇÃO */
+  align-items:center;
+  border:1px solid #eee;
+  gap:60%;  /* deixa um espaço confortável */
+}
+
+.sol-info { display:flex; align-items:center; gap:12px; }
+
+.cliente-img {
+  width:56px; height:56px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.status { text-transform:capitalize; font-weight:700; }
+.status.pendente { color:#917ba4; }
+.status.aceito { color:green; }
+.status.recusado { color:#e53935; }
+
+/* BOTÕES DE AÇÃO */
+.acoes { display:flex; gap:10px; }
+
+.btn {
+  padding:8px 14px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  font-weight:700;
+}
+
+.aceitar {
+  background: linear-gradient(135deg,#34c38f,#2fb57b);
+  color:#fff;
+  box-shadow: 0 8px 18px rgba(47,181,123,0.12);
+  transition: transform .12s ease;
+}
+.aceitar:hover { transform: translateY(-3px) scale(1.02); }
+
+.recusar {
+  background: linear-gradient(135deg,#ff6b6b,#e53935);
+  color:#fff;
+  box-shadow: 0 8px 18px rgba(229,83,83,0.12);
+}
+.recusar:hover { transform: translateY(-3px) scale(1.02); }
+.btn-delete {
+  padding:8px 12px;
+  border-radius:8px;
+  background:#ff6b6b;
+  color:#fff;
+  border:none;
+}
+
+/* ANOTAÇÕES */
+.lista-anotacoes { display:flex; flex-direction:column; gap:12px; margin-top:14px; }
+
+.anotacao-card {
+  background:#fff;
+  padding:12px;
+  border-radius:10px;
+  display:grid;
+  grid-template-columns:120px 1fr 100px;
+  gap:12px;
+  align-items:center;
+  border:1px solid #eee;
+}
+
+.anotacao-data { font-weight:800; color:#917ba4; }
+.anotacao-texto { color:#333; }
+.dias-restantes { font-weight:700; color:#333; }
+
+/* RESPONSIVO — DESATIVA O SLIDE EM TELAS PEQUENAS */
+@media (max-width:900px) {
+  .anotacao-card { grid-template-columns: 1fr; }
+  .tabs-content { flex-direction: column; width: 100%; transform: none !important; }
+  .tab-btn { font-size:0.95rem; padding:8px 12px; }
+}
+
+/* MODAL E COOKIES*/ .hidden { display: none; } /* Quando ativo */ @keyframes fadeInUp { from { opacity: 0; transform: translateY(0px); } to { opacity: 1; transform: translateY(20px); } } .show { margin-top:1%; z-index: 1; animation: fadeInUp 1s ease forwards; margin-left: 84%; height:auto; border-radius: 10%; padding:2%; position: absolute; opacity: 70%; background-color: #f5f5f5; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); display: block; } .show a{ color: #4a4a4a; font-size: 1.2em; text-decoration: none; } .show ul{ padding:1% 1%; text-align:center; } .show li{ padding: 12px 15px; list-style: none; } /* Fundo escuro transparente */ .modal { display: none; /* começa escondido */ position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); justify-content: center; align-items: center; } /* Caixa do modal */ .modal-content { background: #f9f8f2; padding: 30px; border-radius: 15px; text-align: center; width: 350px; box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); animation: fadeIn 0.3s ease; } /* Mensagem */ .modal-content p { margin-bottom: 20px; font-size: 16px; color: #333; } .modal-content p b { font-weight: bold; } /* Botão */ .modal-content button { display: inline-block; /* deixa o botão só no tamanho do conteúdo */ padding: 12px 24px; border: none; border-radius: 10px; background: #ff6b6b; color: white; font-weight: bold; cursor: pointer; font-size: 15px; transition: background 0.3s; width: auto; /* garante que não estique */ min-width: 100px; /* opcional: largura mínima pra não ficar pequeno demais */ } .modal-content button:hover { background: #e05555; } /* Animação de entrada */ @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } } .cookie-banner { position: fixed; bottom: 20px; left: 20px; right: 20px; background-color: #ffffff; border: 1px solid #cfd8dc; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border-radius: 16px; padding: 20px; z-index: 9999; max-width: 480px; margin: auto; font-family: 'Poppins', sans-serif; display: none; animation: fadeIn 0.5s ease-in-out; } .cookie-content h4 { color: #004aad; margin-bottom: 8px; font-size: 1.1rem; } .cookie-content p { color: #333; font-size: 0.95rem; line-height: 1.4; } .cookie-content a { color: #004aad; text-decoration: underline; } .cookie-buttons { margin-top: 12px; display: flex; gap: 10px; justify-content: flex-end; } .cookie-btn { border: none; border-radius: 8px; padding: 8px 16px; cursor: pointer; font-weight: 600; transition: 0.3s; } .cookie-btn.accept { background-color: #004aad; color: #fff; } .cookie-btn.accept:hover { background-color: #003b88; } .cookie-btn.decline { background-color: #e0e0e0; color: #333; } .cookie-btn.decline:hover { background-color: #cfd8dc; } @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }

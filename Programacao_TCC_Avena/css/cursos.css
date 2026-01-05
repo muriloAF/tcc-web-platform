@@ -1,0 +1,250 @@
+@font-face {
+  font-family: "Mulish";
+  src: url("../fonts/paginaInicial/Mulish/Mulish-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+}
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #917ba4;
+  height: 65px;
+  padding: 10px 40px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.perfil-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.nome {
+  color: #fff;
+  font-weight: 600;
+}
+
+.perfil-foto {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+.menu-icon {
+  background: none;
+  border: none;
+  font-size: 1.6em;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+/* ===== CURSOS ===== */
+.cursos {
+    text-align: left;
+    padding: 60px 60px;
+}
+
+.cursos h2 {
+    font-size: 30px;
+    color: #333;
+    transform: translateY(15px);
+}
+
+.cards {
+    z-index: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    z-index: 0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 20px;
+    color: #222;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0 20px 0;
+}
+
+.card button {
+    background-color: #FF5D73;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.card button:hover {
+    background-color: #ff425e;
+}
+
+
+
+
+
+/* Menu escondido */
+.hidden {
+  display: none;
+}
+
+/* Quando ativo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(90px);
+  }
+}
+.show {
+  z-index: 1;
+  animation: fadeInUp 1s ease forwards;
+  margin-left: 84%;
+  border-radius: 10%;
+  padding:2%;
+  position: absolute;
+  opacity: 70%;
+  background-color: #f5f5f5;
+  display: block;
+}
+.show a{
+  color: #4a4a4a;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+.show ul{
+  
+  text-align:center;
+}
+.show li{
+  padding: 12px 15px;
+  list-style: none;
+}
+.Home{
+  font-weight: bolder;
+}
+.cookie-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: #ffffff;
+  border: 1px solid #cfd8dc;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  border-radius: 16px;
+  padding: 20px;
+  z-index: 9999;
+  max-width: 480px;
+  margin: auto;
+  font-family: 'Poppins', sans-serif;
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.cookie-content h4 {
+  color: #004aad;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.cookie-content p {
+  color: #333;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.cookie-content a {
+  color: #004aad;
+  text-decoration: underline;
+}
+
+.cookie-buttons {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.cookie-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cookie-btn.accept {
+  background-color: #004aad;
+  color: #fff;
+}
+
+.cookie-btn.accept:hover {
+  background-color: #003b88;
+}
+
+.cookie-btn.decline {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+.cookie-btn.decline:hover {
+  background-color: #cfd8dc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}

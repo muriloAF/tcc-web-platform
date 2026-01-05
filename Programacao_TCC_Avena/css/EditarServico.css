@@ -1,0 +1,75 @@
+/* EditarServico.css - Copiado de EdicaoPerfil.css para customização independente */
+
+@font-face { font-family: "Birthstone"; src: url("../fonts/edicaoPerfil/Birthstone/Birthstone-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Mulish"; src: url("../fonts/edicaoPerfil/Mulish/Mulish-VariableFont_wght.ttf") format("truetype"); }
+@font-face { font-family: "Inter"; src: url("fonts/edicaoPerfil/Open_Sans/OpenSans-Bold.ttf") format("truetype"); }
+
+* { margin:0; padding:0; box-sizing:border-box; font-family:"Inter", sans-serif; }
+
+header { position:fixed; top:0; left:0; width:100%; height:90px; background:#917ba4; padding:10px 40px; z-index:1; }
+nav { display:flex; justify-content:space-between; align-items:center; }
+.logo img { height:50px; margin-top:10px; cursor:pointer; }
+.menu { display:flex; align-items:center; gap:30px; }
+.menu-icon { background:#917ba4; border:none; font-size:2em; color:#fff; cursor:pointer; }
+
+body { background:#f5f5f5; color:#545454; }
+.headerPerfil { margin-top:50px; }
+.meuPerfil img {margin-top: 30px; margin-left:50px; width:140px; cursor:pointer; }
+.circuloUpload { width:140px; height:140px; border:2px solid #917ba4; border-radius:50%; display:flex; justify-content:center; align-items:center; overflow:hidden; cursor:pointer; margin:0 auto 20px; visibility:hidden; }
+.circuloUpload img { width:100%; height:100%; object-fit:cover; visibility:visible; }
+.linha { width:100%; height:1px; background:#969191; opacity:.5; }
+
+.perfil-wrapper { width:1000px; margin:120px auto 40px; }
+.Formulario { width:100%; margin:0; color:#545454; }
+.form-container { display:grid; grid-template-columns:500px 1fr; column-gap:40px; }
+label { font-weight:bold; margin-bottom:8px; display:block; color:#545454; }
+input { width:100%; padding:10px; border:1px solid #999; border-radius:8px; background:transparent; color:#545454; margin-bottom:20px; }
+textarea { width:100%; height:110px; padding:10px; border:1px solid #999; border-radius:8px; resize:none; margin-bottom:25px; background:transparent; font-size:14px; }
+
+.container { display:grid; grid-template-columns:500px 1fr; column-gap:40px; width:100%; margin:40px 0 0; }
+.coluna-esquerda { display:flex; flex-direction:column; }
+.coluna-direita { display:flex; flex-direction:column; padding-top:4px; }
+.coluna-direita h4 { margin-bottom:15px; font-weight:bold; color:#545454; letter-spacing:.5px; }
+
+.coluna-direita .fotos-container { display:grid; grid-template-columns:280px 280px; grid-auto-rows:150px; column-gap:25px; row-gap:25px; justify-content:start; }
+.fotos-container .foto:nth-child(1){ grid-column:1; grid-row:1; }
+.fotos-container .foto:nth-child(2){ grid-column:1; grid-row:2; }
+#banner3 { grid-column:2; grid-row:1; }
+
+.foto { width:280px; height:150px; background:#b6a4c4; border-radius:20px; position:relative; cursor:pointer; overflow:hidden; display:flex; align-items:center; justify-content:center; transition:.3s; }
+.foto:hover { filter:brightness(.95); }
+.foto img { width:100%; height:100%; object-fit:cover; }
+.lixeira { position:absolute; top:8px; right:8px; font-size:14px; color:#4b0055; font-weight:bold; background:#fff; border-radius:50%; width:22px; height:22px; display:flex; align-items:center; justify-content:center; box-shadow:0 0 5px rgba(0,0,0,.25); transition:.2s; }
+.lixeira:hover { background:#e8e8e8; }
+
+.botoes { display:flex; justify-content:center; align-items:center; gap:35px; margin-top:80px; width:1000px; max-width:100%; margin-left:auto; margin-right:auto; }
+.botoes .btn-deslogar { margin-top:0; }
+.botoes .btn-salvar { min-width:180px; }
+.btn-salvar { background:#4b0055; color:#fff; border:none; padding:10px 20px; border-radius:12px; cursor:pointer; font-weight:bold; transform: translateX(310px); }
+.btn-excluir { background:transparent; color:#4b0055; border:1px solid #4b0055; padding:10px 20px; border-radius:12px; cursor:pointer; font-weight:bold; }
+.btn-deslogar { background:transparent; color:#4b0055; border:1px solid #4b0055; padding:10px 20px; border-radius:12px; cursor:pointer; font-weight:bold; margin-top:20px; display:block; text-align:center; text-decoration:none; width:fit-content; margin-left:auto; margin-right:auto; }
+
+/* Modals & cookies preserved */
+.modal { display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,.5); justify-content:center; align-items:center; }
+.modal-content { background:#f9f8f2; padding:30px; border-radius:15px; text-align:center; width:350px; box-shadow:0 4px 12px rgba(0,0,0,.2); animation:fadeIn .3s ease; }
+.modal-content p { margin-bottom:20px; font-size:16px; color:#333; }
+.modal-content button { padding:12px 24px; border:none; border-radius:10px; background:#ff6b6b; color:#fff; font-weight:bold; cursor:pointer; font-size:15px; transition:.3s; }
+.modal-content button:hover { background:#e05555; }
+@keyframes fadeIn { from{opacity:0; transform:scale(.9);} to{opacity:1; transform:scale(1);} }
+.modal-buttons { display:flex; justify-content:center; gap:15px; margin-top:10px; }
+.btn-confirmar { background:#ff4d4d; }
+.btn-confirmar:hover { background:#d63c3c; }
+.btn-cancelar { background:#cfcfcf; color:#333; }
+.btn-cancelar:hover { background:#b6b6b6; }
+
+.cookie-banner { position:fixed; bottom:20px; left:20px; right:20px; background:#fff; border:1px solid #cfd8dc; box-shadow:0 4px 10px rgba(0,0,0,.15); border-radius:16px; padding:20px; z-index:9999; max-width:480px; margin:auto; display:none; animation:fadeIn .5s ease-in-out; }
+.cookie-content h4 { color:#004aad; margin-bottom:8px; font-size:1.1rem; }
+.cookie-content p { color:#333; font-size:.95rem; line-height:1.4; }
+.cookie-content a { color:#004aad; text-decoration:underline; }
+.cookie-buttons { margin-top:12px; display:flex; gap:10px; justify-content:flex-end; }
+.cookie-btn { border:none; border-radius:8px; padding:8px 16px; cursor:pointer; font-weight:600; transition:.3s; }
+.cookie-btn.accept { background:#004aad; color:#fff; }
+.cookie-btn.accept:hover { background:#003b88; }
+.cookie-btn.decline { background:#e0e0e0; color:#333; }
+.cookie-btn.decline:hover { background:#cfd8dc; }
+@keyframes fadeInBanner { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
