@@ -10,7 +10,7 @@ The objective of this project is to provide a digital solution that helps women 
 -Service register with photos and descriptions;
 -Service require system;
 -Evaluation system;
--Chat;
+-Chat (The free hosting service blocks the functionality, but you can acess it locally);
 -Courses
 
 ## Technologies Used
@@ -67,7 +67,7 @@ O objetivo deste projeto é fornecer uma solução digital que ajude mulheres em
 - Cadastro de serviços com fotos e descrições;
 - Sistema de solicitação de serviços;
 - Sistema de avaliação;
-- Chat interno;
+- Chat (O serviço de hospedagem gratuita bloqueia a funcionalidade, mas você pode acessá-lo localmente);
 - Cursos.
 
 ## Tecnologias Utilizadas
